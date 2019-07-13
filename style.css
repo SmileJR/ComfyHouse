@@ -18,13 +18,54 @@ body {
 	background: var(--mainWhite);
 	font-family: "Lato", sans-serif;
 }
+/* --------------- Navbar ---------------- */
+.navbar {
+	position: sticky;
+	top: 0;
+	height: 60px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background: rgb(231, 226, 221);
+	/* The z index keeps the navbar on top */
+	z-index: 1;
+}
+.navbar-center {
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	/* Justify content keeps the items in navbar separated */
+	justify-content: space-between;
+	padding: 0 1.5rem;
+}
+.nav-icon {
+	font-size: 1.5rem;
+}
+.cart-btn {
+	position: relative;
+	cursor: pointer;
+}
+.cart-items {
+	position: absolute;
+	/* top and right are the reason why cart items will be on right side */
+	top: -8px;
+	right: -8px;
+	background: var(--primaryColor);
+	padding: 0 5px;
+	border-radius: 30%;
+	color: var(--mainWhite);
+}
+/* --------------- End of Navbar ---------------- */
 
 /* hero */
 .hero {
 	min-height: calc(100vh - 60px);
+	/* hero will be 100% of screen minus the space for navbar */
 	background: url("./setup-files-js-comfy-house/images/hero-bcg.jpeg")
 		center/cover no-repeat;
-	/*this is the background on the splash page, it will not repeat  */
+	/*this is the background on the splash page, of the immage is too small it will not repeat  */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -40,8 +81,10 @@ body {
 
 .banner-title {
 	font-size: 3.5rem;
+	/* bigger font size */
 	text-transform: uppercase;
 	letter-spacing: var(--mainSpacing);
+	/* variable of letter spacing   */
 	margin-bottom: 3rem;
 }
 
@@ -54,7 +97,9 @@ body {
 	background: var(--primaryColor);
 	color: var(--mainBlack);
 	border: 1px solid var(--primaryColor);
-	transition: var(--mainTransition);
+	transition: var(
+		--mainTransition
+	); /*transition will appear when hovered over */
 	cursor: pointer;
 }
 
