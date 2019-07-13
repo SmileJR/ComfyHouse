@@ -18,3 +18,50 @@ body {
 	background: var(--mainWhite);
 	font-family: "Lato", sans-serif;
 }
+
+/* hero */
+.hero {
+	min-height: calc(100vh - 60px);
+	background: url("./setup-files-js-comfy-house/images/hero-bcg.jpeg")
+		center/cover no-repeat;
+	/*this is the background on the splash page, it will not repeat  */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*centered the image on splash page  */
+}
+.banner {
+	text-align: center;
+	background: rgba(255, 255, 255, 0.8);
+	/* this is the banner portion with "discover now" in it, white box and slightly transparent */
+	display: inline-block;
+	padding: 2rem;
+}
+
+.banner-title {
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	letter-spacing: var(--mainSpacing);
+	margin-bottom: 3rem;
+}
+
+/* this is the "discover now" button on banner */
+.banner-btn {
+	padding: 1rem 3rem;
+	text-transform: uppercase;
+	letter-spacing: var(--mainSpacing);
+	font-size: 1rem;
+	background: var(--primaryColor);
+	color: var(--mainBlack);
+	border: 1px solid var(--primaryColor);
+	transition: var(--mainTransition);
+	cursor: pointer;
+}
+
+.banner-btn:hover {
+	/* when you hover over discover now, the button goes transparent and te4xt turns different color */
+	background: transparent;
+	color: var(--primaryColor);
+}
+
+/* end of hero */
